@@ -99,6 +99,8 @@ type Metric struct {
 
 	UUID string
 
+	Model string
+
 	Attributes map[string]string
 }
 

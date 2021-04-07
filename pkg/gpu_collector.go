@@ -91,6 +91,7 @@ func ToMetric(values []dcgm.FieldValue_v1, c []Counter, d dcgm.Device, useOld bo
 			GPUUUID:   d.UUID,
 			GPUDevice: fmt.Sprintf("nvidia%d", d.GPU),
 
+			Model:      d.Identifiers.Model,
 			Attributes: map[string]string{},
 		}
 		metrics = append(metrics, m)

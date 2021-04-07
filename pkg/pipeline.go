@@ -165,7 +165,7 @@ func FormatCounters(c []Counter) (string, error) {
 
 var metricsFormat = `
 {{ range $dev := . }}{{ range $val := $dev }}
-{{ $val.Name }}{gpu="{{ $val.GPU }}",{{ $val.UUID }}="{{ $val.GPUUUID }}",device="{{ $val.GPUDevice }}"
+{{ $val.Name }}{gpu="{{ $val.GPU }}",{{ $val.UUID }}="{{ $val.GPUUUID }}",model="{{ $val.Model }}",device="{{ $val.GPUDevice }}"
 
 {{- range $k, $v := $val.Attributes -}}
 	,{{ $k }}="{{ $v }}"

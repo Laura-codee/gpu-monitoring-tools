@@ -14,11 +14,11 @@
 
 DOCKER   ?= docker
 MKDIR    ?= mkdir
-REGISTRY ?= nvidia
+REGISTRY ?= 192.168.100.21:5000/library
 
 DCGM_VERSION   := 2.1.4
 GOLANG_VERSION := 1.14.2
-VERSION        := 2.3.1
+VERSION        := 2.3.1-sm-6
 FULL_VERSION   := $(DCGM_VERSION)-$(VERSION)
 
 .PHONY: all binary install check-format
